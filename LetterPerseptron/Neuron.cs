@@ -14,7 +14,7 @@ namespace LetterPerseptron
         public int Theta { get; private set; }
         private int[] w;
 
-        Neuron()
+        public Neuron()
         {
             w = new int[n];
             Random r = new Random();

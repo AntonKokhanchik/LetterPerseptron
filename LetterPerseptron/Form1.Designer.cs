@@ -35,11 +35,13 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.labelAnswer = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.labelGenerations = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// buttonTransform
 			// 
-			this.buttonTransform.Location = new System.Drawing.Point(82, 6);
+			this.buttonTransform.Location = new System.Drawing.Point(83, 34);
 			this.buttonTransform.Name = "buttonTransform";
 			this.buttonTransform.Size = new System.Drawing.Size(75, 23);
 			this.buttonTransform.TabIndex = 1;
@@ -49,7 +51,7 @@
 			// 
 			// buttonAnswer
 			// 
-			this.buttonAnswer.Location = new System.Drawing.Point(58, 68);
+			this.buttonAnswer.Location = new System.Drawing.Point(58, 74);
 			this.buttonAnswer.Name = "buttonAnswer";
 			this.buttonAnswer.Size = new System.Drawing.Size(75, 23);
 			this.buttonAnswer.TabIndex = 1;
@@ -59,7 +61,7 @@
 			// 
 			// textBoxPicture
 			// 
-			this.textBoxPicture.Location = new System.Drawing.Point(198, 8);
+			this.textBoxPicture.Location = new System.Drawing.Point(199, 36);
 			this.textBoxPicture.Mask = "000 000 000 000";
 			this.textBoxPicture.Name = "textBoxPicture";
 			this.textBoxPicture.Size = new System.Drawing.Size(89, 20);
@@ -67,7 +69,7 @@
 			// 
 			// textBoxLetter
 			// 
-			this.textBoxLetter.Location = new System.Drawing.Point(58, 6);
+			this.textBoxLetter.Location = new System.Drawing.Point(59, 34);
 			this.textBoxLetter.Mask = "<L";
 			this.textBoxLetter.Name = "textBoxLetter";
 			this.textBoxLetter.Size = new System.Drawing.Size(18, 20);
@@ -76,7 +78,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(12, 9);
+			this.label1.Location = new System.Drawing.Point(13, 37);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(40, 13);
 			this.label1.TabIndex = 4;
@@ -85,7 +87,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(163, 9);
+			this.label2.Location = new System.Drawing.Point(164, 37);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(29, 13);
 			this.label2.TabIndex = 4;
@@ -94,17 +96,37 @@
 			// labelAnswer
 			// 
 			this.labelAnswer.AutoSize = true;
-			this.labelAnswer.Location = new System.Drawing.Point(195, 73);
+			this.labelAnswer.Location = new System.Drawing.Point(195, 79);
 			this.labelAnswer.Name = "labelAnswer";
 			this.labelAnswer.Size = new System.Drawing.Size(37, 13);
 			this.labelAnswer.TabIndex = 5;
 			this.labelAnswer.Text = "Ответ";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(12, 9);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(151, 13);
+			this.label3.TabIndex = 6;
+			this.label3.Text = "Обучение завершено, шагов";
+			// 
+			// labelGenerations
+			// 
+			this.labelGenerations.AutoSize = true;
+			this.labelGenerations.Location = new System.Drawing.Point(169, 9);
+			this.labelGenerations.Name = "labelGenerations";
+			this.labelGenerations.Size = new System.Drawing.Size(13, 13);
+			this.labelGenerations.TabIndex = 6;
+			this.labelGenerations.Text = "0";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(316, 139);
+			this.Controls.Add(this.labelGenerations);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.labelAnswer);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -128,6 +150,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label labelAnswer;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label labelGenerations;
 	}
 }
 

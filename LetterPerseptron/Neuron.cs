@@ -9,7 +9,7 @@ namespace LetterPerseptron
     class Neuron
     {
         private int n = 12;
-        private int speed = 1;
+        private int speed = 2; // 2, чувствительность меняется со скоростью, синапсы без скорости - лучший результат (385)
 
         public int Theta { get; private set; }
         private int[] w;
@@ -19,9 +19,11 @@ namespace LetterPerseptron
             w = new int[n];
             Random r = new Random();
 
-            for (int i = 0; i < n; i++)
-                w[i] = r.Next(30);
-            Theta = r.Next(30);
+			for (int i = 0; i < n; i++)
+				w[i] = r.Next(30);
+				//w[i] = 10;
+			Theta = r.Next(30);
+			//Theta = -1;
         }
 
         public bool React(string picture)
@@ -40,8 +42,10 @@ namespace LetterPerseptron
         public void Learn(string picture, int mistake)
         {
             for (int i = 0; i < n; i++)
-                w[i] += mistake * int.Parse(picture[i].ToString()) * speed;
-            Theta -= mistake * speed;
-        }
+				w[i] += mistake * int.Parse(picture[i].ToString()) * speed;
+				//w[i] += mistake * int.Parse(picture[i].ToString());
+			Theta -= mistake * speed;
+			//Theta -= mistake;
+		}
     }
 }

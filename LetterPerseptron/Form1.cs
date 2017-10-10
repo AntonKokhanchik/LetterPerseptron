@@ -22,6 +22,7 @@ namespace LetterPerseptron
             FillDictionaries();
 			perseptron = new Perseptron();
 			AutoLearn();
+			labelGenerations.Text = perseptron.Generation.ToString();
         }
 
         private void FillDictionaries()
